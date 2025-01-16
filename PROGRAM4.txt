@@ -1,0 +1,74 @@
+public class TypeCastingDemo {
+    public static void main(String[] args) {
+        
+        int intValue = 100;
+        double doubleValue = intValue; 
+        System.out.println("Implicit Type Casting (Widening):");
+        System.out.println("Integer Value: " + intValue);
+        System.out.println("Double Value: " + doubleValue);
+
+   
+        double doubleNum = 99.99;
+        int intNum = (int) doubleNum; 
+        System.out.println("\nExplicit Type Casting (Narrowing):");
+        System.out.println("Double Value: " + doubleNum);
+        System.out.println("Integer Value: " + intNum);
+
+    
+        char charValue = 'A';
+        int asciiValue = (int) charValue; 
+        System.out.println("\nCasting char to int:");
+        System.out.println("Character Value: " + charValue);
+        System.out.println("ASCII Value: " + asciiValue);
+
+     
+        int asciiCode = 66;
+        char newChar = (char) asciiCode;
+        System.out.println("\nCasting int to char:");
+        System.out.println("ASCII Code: " + asciiCode);
+        System.out.println("Character Value: " + newChar);
+
+     
+        long longValue = 130;
+        byte byteValue = (byte) longValue; 
+        System.out.println("\nNarrowing from long to byte (with overflow):");
+        System.out.println("Long Value: " + longValue);
+        System.out.println("Byte Value: " + byteValue);
+    }
+}
+
+Q2=2
+ public class VariableTypesDemo {
+
+    
+    int instanceVariable = 10;
+
+ 
+    static int staticVariable = 20;
+
+    public void demonstrateVariables() {
+    
+        int localVariable = 30;
+
+     
+        System.out.println("Local Variable: " + localVariable);        
+        System.out.println("Instance Variable: " + instanceVariable); 
+        System.out.println("Static Variable: " + staticVariable);    
+    }
+
+    public static void main(String[] args) {
+        
+        VariableTypesDemo obj = new VariableTypesDemo();
+
+        System.out.println("Accessing variables from demonstrateVariables method:");
+        obj.demonstrateVariables();
+
+      
+        System.out.println("\nAccessing Static Variable from main method:");
+        System.out.println("Static Variable: " + staticVariable);
+
+       
+        System.out.println("\nAccessing Instance Variable from main method:");
+        System.out.println("Instance Variable: " + obj.instanceVariable);
+    }
+}
